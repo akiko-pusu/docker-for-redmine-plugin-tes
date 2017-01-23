@@ -25,12 +25,12 @@ RUN apt-get install -qq -y \
     libbz2-dev
 
 ### install lts stable nodejs ###
-
-RUN cd /tmp && wget https://github.com/Medium/phantomjs/archive/2.1.14.tar.gz
-RUN cd /tmp && tar xvzf 2.1.14.tar.gz
-RUN sudo cp /tmp/phantomjs-2.1.14/bin/phantomjs /usr/local/bin
+RUN cd /tmp && wget https://github.com/paladox/phantomjs/releases/download/2.1.7/phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN cd /tmp && tar xfj phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN sudo cp /tmp/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
 
 ### get Redmine source
 RUN cd /tmp && hg clone https://bitbucket.org/redmine/redmine-all redmine
 
-
+RUN gem install simplecov simplecov-rcov yard --no-rdoc --no-ri
+RUN gem update bundler
