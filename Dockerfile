@@ -25,7 +25,7 @@ RUN apt-get install -qq -y \
     libbz2-dev
 
 ### install lts stable nodejs ###
-RUN cd /tmp && wget https://github.com/paladox/phantomjs/releases/download/2.1.7/phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN cd /tmp && wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
 RUN cd /tmp && tar xfj phantomjs-2.1.1-linux-x86_64.tar.bz2
 RUN sudo cp /tmp/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
 
