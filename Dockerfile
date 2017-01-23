@@ -32,7 +32,5 @@ RUN sudo cp /tmp/phantomjs-2.1.14/bin/phantomjs /usr/local/bin
 
 ### get Redmine source
 RUN cd /tmp && hg clone https://bitbucket.org/redmine/redmine-all redmine
-RUN gem install simplecov simplecov-rcov yard --no-rdoc --no-ri
-CMD gem update bundler
 
 
