@@ -34,3 +34,7 @@ RUN cd /tmp && hg clone https://bitbucket.org/redmine/redmine-all redmine
 
 RUN gem install simplecov simplecov-rcov yard --no-rdoc --no-ri
 RUN gem update bundler
+
+### pull changeset
+WORKDIR /tmp/redmine
+CMD hg pull
