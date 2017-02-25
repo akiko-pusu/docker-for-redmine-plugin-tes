@@ -8,6 +8,7 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 RUN apt-get update
 RUN apt-get install -qq -y \
+    vim                    \
     wget                   \
     sudo                   \
     git                    \
@@ -34,6 +35,8 @@ RUN cd /tmp && hg clone https://bitbucket.org/redmine/redmine-all redmine
 
 RUN gem install simplecov simplecov-rcov yard --no-rdoc --no-ri
 RUN gem update bundler
+
+EXPOSE 3000
 
 ### pull changeset
 WORKDIR /tmp/redmine
