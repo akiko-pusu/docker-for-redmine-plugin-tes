@@ -1,4 +1,4 @@
-FROM ruby:2.3.1
+FROM ruby:2.4.1
 MAINTAINER AKIKO TAKANO / (Twitter: @akiko_pusu)
 
 ### Replace shell with bash so we can source files ###
